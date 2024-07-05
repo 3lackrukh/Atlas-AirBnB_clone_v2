@@ -36,6 +36,7 @@ def python_text(text='is cool'):
 def number(n):
     return f'{n} is a number'
 
+
 """ Run the app"""
 # runs the app in debug mode
 if __name__ == '__main__':
