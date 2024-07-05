@@ -32,13 +32,9 @@ def python_text(text='is cool'):
 # replace underscore with space
 
 
-@app.route('/number/<n>', strict_slashes=False)
+@app.route('/number/<int:n>', strict_slashes=False)
 def number(n):
-    if isinstance(n, int):
-        return n
-    else:
-        return
-
+    return f'{n} is a number'
 
 """ Run the app"""
 # runs the app in debug mode
