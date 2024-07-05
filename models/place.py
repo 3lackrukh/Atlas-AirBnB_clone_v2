@@ -69,6 +69,7 @@ class Place(BaseModel, Base):
             'Amenity',
             secondary='place_amenity',
             back_populates='place_amenities',
+            cascade='all, delete-orphan',
             viewonly=False)
         reviews = relationship(
             'Review',
