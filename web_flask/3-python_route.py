@@ -23,6 +23,7 @@ def c_text(text):
     return 'C {}'.format(text.replace('_', ' '))
 # replace underscore with space
 
+
 @app.route('/python/', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def python_text(text='is cool'):
@@ -30,9 +31,8 @@ def python_text(text='is cool'):
 # displays Python followed by input text
 # replace underscore with space
 
+
 """ Run the app"""
-
-
 # runs the app in debug mode
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
