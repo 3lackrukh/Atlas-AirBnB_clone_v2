@@ -27,7 +27,7 @@ class DBStorage:
         database = os.getenv('HBNB_MYSQL_DB')
         env = os.getenv('HBNB_ENV')
         from models.base_model import BaseModel
-from os import remove
+
 
         self.__engine = create_engine(
             f'mysql+mysqldb://{user}:{password}@{host}/{database}',
