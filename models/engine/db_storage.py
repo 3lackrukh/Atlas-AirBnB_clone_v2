@@ -27,6 +27,7 @@ class DBStorage:
         database = os.getenv('HBNB_MYSQL_DB')
         env = os.getenv('HBNB_ENV')
         from models.base_model import BaseModel
+from os import remove
 
         self.__engine = create_engine(
             f'mysql+mysqldb://{user}:{password}@{host}/{database}',
@@ -77,3 +78,7 @@ class DBStorage:
             bind=self.__engine, expire_on_commit=False)
         Session = scoped_session(session_factory)
         self.__session = Session()
+
+    def close(self):
+        """Close the current database session"""
+        self.__session.remove()
