@@ -26,7 +26,6 @@ class DBStorage:
         host = os.getenv('HBNB_MYSQL_HOST', 'localhost')
         database = os.getenv('HBNB_MYSQL_DB')
         env = os.getenv('HBNB_ENV')
-        from models.base_model import BaseModel
 
 
         self.__engine = create_engine(
@@ -81,4 +80,4 @@ class DBStorage:
 
     def close(self):
         """Close the current database session"""
-        self.__session.remove()
+        self.__session.close()
