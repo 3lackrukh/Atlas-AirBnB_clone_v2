@@ -50,6 +50,6 @@ def number_odd_or_even(n):
 
 
 """ Run the app"""
-# runs the app in debug mode
+# runs the app 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
