@@ -13,6 +13,7 @@ def teardown_db(exception):
     """ closes the storage """
     storage.close()
 
+
 @app.route('/states_list', strict_slashes=False)
 def states_list():
     """ returns a list of states """
