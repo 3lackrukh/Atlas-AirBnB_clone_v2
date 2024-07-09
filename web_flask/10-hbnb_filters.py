@@ -16,10 +16,10 @@ def hbnb_filters():
     amenities = storage.all(Amenity).values()
     for state in states:
         state.cities.sort(key=lambda city: city.name)
-    sorted_states = sorted(states, key=lambda state: state.name)    
+    sorted_states = sorted(states, key=lambda state: state.name)
     return render_template('10-hbnb_filters.html', states=sorted_states,
                            amenities=amenities)
- 
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
